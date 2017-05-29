@@ -1,0 +1,15 @@
+import org.apache.commons.lang.StringUtils;
+import org.apache.hadoop.hive.ql.exec.UDF;
+import org.apache.hadoop.io.Text;
+
+public MyClass extends UDF{
+private Text result = new Text();
+public Text concat_ws(string SEP, array<string>) {
+    
+ if(SEP == null) {
+ return null;
+ }
+ result.set(StringUtils.join(array<string>,SEP.toString));
+ return result;
+ }
+  }
